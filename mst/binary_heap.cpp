@@ -114,37 +114,3 @@ void binary_heap::insert(bnode* insertbnode)
 	decreasekey(heap[heap.size()-1],key);
 	return;
 }
-/*
-int main()
-{
-	int size=1000000;
-	vector<double> array;
-	array.resize(size);
-	for(int i=0;i<array.size();i++)
-		array[i]=i;
-	clock_t tttStart = clock();
-	binary_heap* heap=new binary_heap();
-	heap->buildminheap(array);
-	printf("Make Time taken: %.2fs\n", (double)(clock() - tttStart)/CLOCKS_PER_SEC);
-
-	clock_t tStart = clock();
-	for(int i=0;i<array.size();i++)
-		heap->decreasekey(i+1,i-10);
-	printf("Decrease key Time taken: %.2fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
-
-	clock_t ttttStart = clock();
-	for(int i=0;i<array.size();i++)
-		heap->insert(-(i+array.size()+1));
-	printf("Insert Time taken: %.2fs\n", (double)(clock() - ttttStart)/CLOCKS_PER_SEC);
-	clock_t ttStart = clock();
-	for(int i=0;i<array.size();i++)
-		{
-			double tmp=heap->extractmin();
-			//cout<<tmp<<endl;
-			//cout<<array.size()-i-1<<" bnodes are left"<<endl;
-		}
-	
-	printf("Extract min Time taken: %.2fs\n", (double)(clock() - ttStart)/CLOCKS_PER_SEC);
-	return 0;
-}
-*/
