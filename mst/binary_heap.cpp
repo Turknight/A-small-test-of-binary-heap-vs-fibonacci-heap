@@ -85,20 +85,20 @@ void binary_heap::decreasekey(bnode* decreasenode,double k)
 	if(k>heap[i]->getkey())
 		cout<<"error when decrease key"<<endl;
 	heap[i]->setkey(k);
-	int j=i;
-	while(j>1 && heap[j/2]->getkey()>heap[j]->getkey())
+
+	while(i>1 && heap[i/2]->getkey()>heap[i]->getkey())
 		{
 			//exchange a[i] with a[parent]
 			//int ipos=i;
 			//int parentpos=i/2;
 			//cout<<"decrease key change node "<<heap[j/2]->getname()<<" in ["<<j/2<<"]"<<" with node "<<heap[j]->getname()<<" in ["<<j<<"]"<<endl;
-			bnode* tmp=heap[j/2];
-			heap[j/2]=heap[j];
-			heap[j]=tmp;
-			heap[j]->setposition(j);
-			heap[j/2]->setposition(j/2);
+			bnode* tmp=heap[i/2];
+			heap[i/2]=heap[i];
+			heap[i]=tmp;
+			heap[i]->setposition(i);
+			heap[i/2]->setposition(i/2);
 			
-			j=j/2;
+			i=i/2;
 		}
 	return;
 }
