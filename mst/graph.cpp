@@ -66,9 +66,3 @@ void graph_generator::addedge(int s,int v,double weight)
 		}
 	return;
 }
-/*
-int main()
-{
-	return 0;
-}
-*/
